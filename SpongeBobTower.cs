@@ -29,6 +29,7 @@ using Il2CppAssets.Scripts.Models.Towers.Projectiles;
 using Il2CppAssets.Scripts.Models.Towers.Weapons;
 using System;
 using UnityEngine.UIElements;
+using Il2CppAssets.Scripts.Unity.Towers.Projectiles;
 
 namespace SpongeBob
 {
@@ -66,6 +67,7 @@ namespace SpongeBob
             projectile.pierce += 1;
             towerModel.ApplyDisplay<SpongeBobDisplay>();
             towerModel.displayScale = 5;
+            projectileModel.scale = 2;
         }
         public override string Get2DTexture(int[] tiers)
         {
@@ -254,14 +256,16 @@ namespace SpongeBob
         {
             var attackModel = tower.GetAttackModel();
             var weaponModel = tower.GetWeapon();
-            var projectile = Game.instance.model.GetTower(TowerType.DartMonkey, 5, 0, 0).GetAttackModel().weapons[0].projectile.Duplicate();
-            attackModel.weapons[0].projectile = projectile;
-            tower.AddBehavior(attackModel);
-            var projectileModel = weaponModel.projectile;   
+            var projectileModel = weaponModel.projectile;
+            var projectileDart = Game.instance.model.GetTower(TowerType.DartMonkey, 5, 0, 0).GetWeapon().projectile.GetBehavior<CreateProjectileOnExhaustFractionModel>().Duplicate();
+            projectileDart.projectile.display = weaponModel.projectile.display;
+            weaponModel.projectile.AddBehavior(projectileDart);
+            projectileDart.GetDescendant<DamageModel>().damage += 1;
+            weaponModel.emission = new ArcEmissionModel("ArcEmissionModel_", 8, 0, 30, null, false, false);
+            projectileDart.emission = new ArcEmissionModel("ArcEmissionModel", 10, 0, 360, null, false, false);
             projectileModel.ApplyDisplay<SpongeBobProjectileDisplay>();
-            projectile.ApplyDisplay<SpongeBobProjectileDisplay>();
-            projectile.GetDescendant<DamageModel>().damage += 1;
-            weaponModel.emission = new ArcEmissionModel("ArcEmissionModel_", 5, 0, 30, null, false, false);
+            projectileModel.scale = 4;
+            weaponModel.projectile.scale = 3;
         }
     }
     internal class CataclismoAbissal : ModUpgrade<SpongeBob>
@@ -279,12 +283,13 @@ namespace SpongeBob
         {
             var attackModel = tower.GetAttackModel();
             var weaponModel = tower.GetWeapon();
-            var projectile = Game.instance.model.GetTower(TowerType.DartMonkey, 5, 0, 0).GetAttackModel().weapons[0].projectile.Duplicate();
-            attackModel.weapons[0].projectile = projectile;
-            tower.AddBehavior(attackModel);
             var projectileModel = weaponModel.projectile;
+            var projectileDart = Game.instance.model.GetTower(TowerType.DartMonkey, 5, 0, 0).GetWeapon().projectile.GetBehavior<CreateProjectileOnExhaustFractionModel>().Duplicate();
+            projectileDart.projectile.display = weaponModel.projectile.display;
+            weaponModel.projectile.AddBehavior(projectileDart);
             projectileModel.ApplyDisplay<SpongeBobProjectileDisplay>();
-            projectile.GetDescendant<DamageModel>().damage += 500;
+            projectileModel.GetDescendant<DamageModel>().damage += 700;
+            projectileDart.GetDescendant<DamageModel>().damage += 400;
             var Ability = Game.instance.model.GetTower(TowerType.Mermonkey, 0,5,0).GetAbilities()[0].Duplicate();
             Ability.maxActivationsPerRound = 9999999;
             Ability.canActivateBetweenRounds = true;
@@ -292,8 +297,11 @@ namespace SpongeBob
             Ability.cooldown = 3;
             Ability.icon = GetSpriteReference("BolhaDeSabao");
             tower.AddBehavior(Ability);
-            weaponModel.rate *= 0.35f;
+            weaponModel.rate *= 0.25f;
             weaponModel.emission = new ArcEmissionModel("ArcEmissionModel_", 5, 0, 30, null, false, false);
+            projectileDart.emission = new ArcEmissionModel("ArcEmissionModel", 15, 0, 360, null, false, false);
+            projectileModel.scale = 4;
+            projectileDart.projectile.scale = 3;
         }
     }
     internal class VisaoPerfeita : ModUpgrade<SpongeBob>
