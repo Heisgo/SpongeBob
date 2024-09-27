@@ -94,7 +94,7 @@ namespace SpongeBob
             var Hadopelagica = Game.instance.model.GetTowerFromId("SuperMonkey-302").GetAttackModel().Duplicate();
             Hadopelagica.range = tower.range;
             Hadopelagica.name = "Hadopelagica";
-            Hadopelagica.weapons[0].projectile.pierce = 99999999999999; 
+            Hadopelagica.weapons[0].projectile.pierce = 99999999999969; 
             Hadopelagica.weapons[0].projectile.GetDamageModel().damage = 999999;
             tower.AddBehavior(Hadopelagica);
             tower.GetWeapon().projectile.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel", "Moabs", 1, 4855, false, true));
