@@ -13,6 +13,11 @@
         <Content Include=".github\workflows\build.yml" />
     </ItemGroup>
     <ItemGroup>
+      <Reference Include="PathsPlusPlus">
+        <HintPath>D:\SteamLibrary\steamapps\common\BloonsTD6\Mods\PathsPlusPlus.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+    <ItemGroup>
       <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
     </ItemGroup>
 

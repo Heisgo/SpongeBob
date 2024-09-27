@@ -33,4 +33,23 @@ namespace SpongeBob.Display
             SetMeshTexture(node, "BobCharacter");
         }
     }
+    internal class SpongeBob005Display : ModDisplay
+    {
+        public override string BaseDisplay => Generic2dDisplay;
+
+        public override void ModifyDisplayNode(UnityDisplayNode node)
+        {
+            Set2DTexture(node, "BobCharacter005");
+            SetMeshTexture(node, "BobCharacter005");
+        }
+    }
+    internal class Monarca6thPath : ModDisplay
+    {
+        public override string BaseDisplay => Generic2dDisplay;
+
+        public override void ModifyDisplayNode(UnityDisplayNode node)
+        {
+            Set2DTexture(node, "UltraBobCharacter010");
+        }
+    }
 }
