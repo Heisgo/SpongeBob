@@ -63,7 +63,7 @@ namespace SpongeBob
         public override string Portrait => Icon;
         public override int Path => MIDDLE;
         public override int Tier => 1;
-        public override int Cost => 200;
+        public override int Cost => 70000000;
 
         public override string Description => " O NOVO MONARCA EMERGIU! Os bloons serão reduzidos a NADA DIANTE AO PESO DE SUA IRA! Aquele que ousar desafiar o MONARCA estará CONDENADO ao ABISMO! Preparem-se, pois a CARNIFICINA COMEÇARÁ AGORA!";
 
