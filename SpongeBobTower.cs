@@ -49,7 +49,7 @@ namespace SpongeBob
         public override string Description => "Atira bolhas de sabão nos bloons.";
         public override string DisplayName => "SpongeBob";
         public override string Icon => "BobCharacter";
-        public override string Portrait => "bobesponjacomm";
+        public override string Portrait => "bobsponjacomm";
         //public override ParagonMode ParagonMode => ParagonMode.Base555;
         //public override bool Use2DModel => true;
 
@@ -124,8 +124,8 @@ namespace SpongeBob
     }
     internal class BolhaAprimorada : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter100";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon100";
+        public override string Portrait => "BobCharacter100";
         public override int Path => TOP;
         public override int Tier => 1;
         public override int Cost => 200;
@@ -146,8 +146,8 @@ namespace SpongeBob
     }
     internal class BolhasCortantes : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter200";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon200";
+        public override string Portrait => "BobCharacter200";
         public override int Path => TOP;
         public override int Tier => 2;
         public override int Cost => 320;
@@ -166,8 +166,8 @@ namespace SpongeBob
     }
     internal class BolhasExplosivas : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter300";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon300";
+        public override string Portrait => "BobCharacter300";
         public override int Path => TOP;
         public override int Tier => 3;
         public override int Cost => 3100;
@@ -189,8 +189,8 @@ namespace SpongeBob
     }
     internal class FuriaDasMares : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter400";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon400";
+        public override string Portrait => "BobCharacter400";
         public override int Path => TOP;
         public override int Tier => 4;
         public override int Cost => 58535;
@@ -213,8 +213,8 @@ namespace SpongeBob
     }
     internal class AIraAbissal : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter500";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon500";
+        public override string Portrait => "BobCharacter500";
         public override int Path => TOP;
         public override int Tier => 5;
         public override int Cost => 978246;
@@ -241,6 +241,8 @@ namespace SpongeBob
     }
     internal class ChuvaDeBolhas : ModUpgrade<SpongeBob>
     {
+        public override string Icon => "SpongebobIcon010";
+        public override string Portrait => "bobesponjacomm";
         public override int Path => MIDDLE;
         public override int Tier => 1;
         public override int Cost => 700;
@@ -257,6 +259,8 @@ namespace SpongeBob
     }
     internal class BolhasExtras : ModUpgrade<SpongeBob>
     {
+        public override string Icon => "SpongebobIcon020";
+        public override string Portrait => "bobesponjacomm";
         public override int Path => MIDDLE;
         public override int Tier => 2;
         public override int Cost => 900;
@@ -278,8 +282,8 @@ namespace SpongeBob
     }
     internal class BolhasRecursivas : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter030";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon030";
+        public override string Portrait => "BobCharacter030";
         public override int Path => MIDDLE;
         public override int Tier => 3;
         public override int Cost => 2790;
@@ -303,8 +307,8 @@ namespace SpongeBob
     }
     internal class TsunamiDeBolhas : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter040";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon040";
+        public override string Portrait => "BobCharacter040";
         public override int Path => MIDDLE;
         public override int Tier => 4;
         public override int Cost => 17800;
@@ -330,12 +334,12 @@ namespace SpongeBob
     }
     internal class CataclismoAbissal : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter050";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon050";
+        public override string Portrait => "BobCharacter050";
         public override int Path => MIDDLE;
         public override int Tier => 5;
         public override int Cost => 850000;
-
+        
         public override string Description => "Bob se torna a encarnação do terror da zona hadopelágica, evocando o cataclismo das profundezas." +
             "O campo se torna o próprio abismo, repleto de desespero. Qualquer um que ouse cruzar o caminho " +
             "de Bob, estará condenado a sucumbir diante às trevas. A morte é a única certeza presente.";
@@ -373,6 +377,8 @@ namespace SpongeBob
     }
     internal class VisaoPerfeita : ModUpgrade<SpongeBob>
     {
+        public override string Icon => "SpongebobIcon001";
+        public override string Portrait => "bobesponjacomm";
         public override int Path => BOTTOM;
         public override int Tier => 1;
         public override int Cost => 240;
@@ -389,8 +395,8 @@ namespace SpongeBob
     }
     internal class FeiticoDoReiNetuno : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter002";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon002";
+        public override string Portrait => "BobCharacter002";
         public override int Path => BOTTOM;
         public override int Tier => 2;
         public override int Cost => 900;
@@ -414,8 +420,8 @@ namespace SpongeBob
 
     internal class FeiticoDoReiNetunoMaisPoderoso : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter003";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon003";
+        public override string Portrait => "BobCharacter003";
         public override int Path => BOTTOM;
         public override int Tier => 3;
         public override int Cost => 4969;
@@ -441,8 +447,8 @@ namespace SpongeBob
     }
     internal class HamburguerDeSiriDourado : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter004";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon004";
+        public override string Portrait => "BobCharacter004";
         public override int Path => BOTTOM;
         public override int Tier => 4;
         public override int Cost => 17000;
@@ -464,8 +470,8 @@ namespace SpongeBob
     
     internal class CondenacaoDivinaDoOuro : ModUpgrade<SpongeBob>
     {
-        public override string Icon => "BobCharacter005";
-        public override string Portrait => Icon;
+        public override string Icon => "SpongebobIcon005";
+        public override string Portrait => "BobCharacter005";
         public override int Path => BOTTOM;
         public override int Tier => 5;
         public override int Cost => 816969;
